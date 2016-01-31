@@ -1,8 +1,9 @@
 #include<stdio.h>
 #include<vector>
+#include"solution.h"
 
-#include"../../lib/random.h"
 
 int main(){
-	printf ("helloworld");
+	Solution solution_obj;
+	solution_obj.testMaxset();
 }
