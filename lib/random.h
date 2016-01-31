@@ -16,6 +16,7 @@ class random{
 		void random_non_negative_integer_array_genration(
 											vector<int> &A,
 											int array_size);
+		void result_display(vector<int> &A);
 };
 
 #endif

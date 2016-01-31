@@ -55,3 +55,17 @@ void random::random_non_negative_integer_array_genration(vector<int> &A,
 		A.push_back(rand() % 10 + 1);
 	}
 }
+
+void random::result_display(vector<int> &A){
+
+	printf ( "result value: ");
+
+	for (int i = 0; i < A.size(); i ++ ) {
+		int display_value ;
+		display_value = A.back();
+		A.pop_back();
+		
+		printf ("%d ", display_value );
+
+	}
+}
