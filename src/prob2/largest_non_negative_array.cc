@@ -6,4 +6,5 @@
 int main(){
 	Solution solution_obj;
 	solution_obj.testMaxset();
+	return 0;
 }

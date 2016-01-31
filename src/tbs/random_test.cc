@@ -1,5 +1,5 @@
 #include<stdio.h>
-#include"random.h"
+#include"../../lib/random.h"
 
 
 int main(){

@@ -1,4 +1,5 @@
-#include<solution.h>
+#include<stdio.h>
+#include"solution.h"
 #include"../../lib/random.h"
 
 vector<int> Solution::maxset(vector<int> &A) {
@@ -39,6 +40,15 @@ vector<int> Solution::maxset(vector<int> &A) {
 
 bool Solution::testMaxset(void){
 	random random_obj;
+	vector<int> returnVector;
+
+	random_obj.random_integer_array_genration(returnVector,10);
+	printf ("initial data value\n");
+	random_obj.result_display(returnVector);
+	printf ("\n");
+	printf ("updated value\n");
+	random_obj.result_display(returnVector);
+	printf ("\n");
 	//maxset(A);
 	return true;
 
