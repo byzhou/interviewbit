@@ -201,6 +201,7 @@ EQUALS	../../build/Makefile	/^EQUALS = =$/;"	m
 HEX	../../build/CMakeFiles/2.8.12.2/CompilerIdC/CMakeCCompilerId.c	335;"	d	file:
 HEX	../../build/CMakeFiles/2.8.12.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	328;"	d	file:
 ID_VOID_MAIN	../../build/CMakeFiles/2.8.12.2/CompilerIdC/CMakeCCompilerId.c	9;"	d	file:
+MYTYPES_H	../../lib/mytypes.h	2;"	d
 PLATFORM_ID	../../build/CMakeFiles/2.8.12.2/CompilerIdC/CMakeCCompilerId.c	212;"	d	file:
 PLATFORM_ID	../../build/CMakeFiles/2.8.12.2/CompilerIdC/CMakeCCompilerId.c	215;"	d	file:
 PLATFORM_ID	../../build/CMakeFiles/2.8.12.2/CompilerIdC/CMakeCCompilerId.c	218;"	d	file:
@@ -269,13 +270,17 @@ info_version	../../build/CMakeFiles/2.8.12.2/CompilerIdCXX/CMakeCXXCompilerId.cp
 main	../../build/CMakeFiles/2.8.12.2/CompilerIdC/CMakeCCompilerId.c	/^int main(int argc, char* argv[])$/;"	f
 main	../../build/CMakeFiles/2.8.12.2/CompilerIdC/CMakeCCompilerId.c	/^void main() {}$/;"	f
 main	../../build/CMakeFiles/2.8.12.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^int main(int argc, char* argv[])$/;"	f
-main	../../lib/random_test.cc	/^int main(){$/;"	f
 main	../../src/prob2/largest_non_negative_array.cc	/^int main(){$/;"	f
+main	../../src/tbs/random_test.cc	/^int main(){$/;"	f
 maxset	../../src/prob2/solution.cc	/^vector<int> Solution::maxset(vector<int> &A) {$/;"	f	class:Solution
+qint	../../lib/mytypes.h	/^typedef std::queue<int> qint;$/;"	t
+qintit	../../lib/mytypes.h	/^typedef std::queue<int> qintit;$/;"	t
+random	../../lib/random.cc	/^random::random(){$/;"	f	class:random
 random	../../lib/random.h	/^class random{$/;"	c
-random_h	../../lib/random.h	2;"	d
-random_integer_array_genration	../../lib/random.cc	/^void random::random_integer_array_genration(vector<int> &A, $/;"	f	class:random
-random_integer_array_genration	../../lib/random.cc	/^void random::random_integer_array_genration(vector<int> &A, int array_size){$/;"	f	class:random
-random_non_negative_integer_array_genration	../../lib/random.cc	/^void random::random_non_negative_integer_array_genration(vector<int> &A,$/;"	f	class:random
-result_display	../../lib/random.cc	/^void random::result_display(vector<int> &A){$/;"	f	class:random
-testMaxset	../../src/prob2/solution.cc	/^bool Solution::testMaxset(void){$/;"	f	class:Solution
+random_integer_array_genration	../../lib/random.cc	/^void random::random_integer_array_genration(vint &A, $/;"	f	class:random
+random_integer_array_genration	../../lib/random.cc	/^void random::random_integer_array_genration(vint &A, int array_size){$/;"	f	class:random
+random_non_negative_integer_array_genration	../../lib/random.cc	/^void random::random_non_negative_integer_array_genration(vint &A,$/;"	f	class:random
+result_display	../../lib/random.cc	/^void random::result_display(vint &A){$/;"	f	class:random
+testMaxset	../../src/prob2/solution.cc	/^void Solution::testMaxset(void){$/;"	f	class:Solution
+vint	../../lib/mytypes.h	/^typedef std::vector<int> vint;$/;"	t
+vintit	../../lib/mytypes.h	/^typedef std::vector<int>::iterator vintit;$/;"	t

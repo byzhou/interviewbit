@@ -7,8 +7,7 @@ using std::vector;
 class Solution{
 	public:
 		vector<int> maxset(vector<int> &A);	
-		bool testMaxset(void);
-
+		void testMaxset(void);
 };
 
 #endif

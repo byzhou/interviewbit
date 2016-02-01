@@ -1,55 +1,68 @@
+#include<stdlib.h>
 #include<stdio.h>
+#include<vector>
+#include<queue>
+
 #include"solution.h"
+
 #include"../../lib/random.h"
+#include"../../lib/mytypes.h"
+
 
 vector<int> Solution::maxset(vector<int> &A) {
     // Do not write main() function.
 				// Do not read input, instead use the arguments to the function.
     // Do not print the output, instead return values as specified
     // Still have a doubt. Checkout www.interviewbit.com/pages/sample_codes/ for more details
-    vector<int> returnSet ;
-    vector<int> tmpMax ;
-    
-    int     maxValue = -9999;
-    int     tmpValue ;
-    int     popValue ;
-    
-    for (int i = 0; i < A.size(); ) {
-        popValue = A.front();
-        A.erase(A.begin());
-        if (popValue > 0){
-            returnSet.push_back(popValue);
-            tmpValue += popValue;        
-        } else {
-            tmpValue = 0 ;
-            returnSet.erase(returnSet.begin(),returnSet.end());
-            if (tmpValue > maxValue) {
-                maxValue = tmpValue ;
-                tmpMax = returnSet ;
-            }
-        }
-    }
-    
-    if (tmpValue > maxValue) {
-        maxValue = tmpValue ;
-        tmpMax = returnSet ;
-    }
-        
+	// init
+	vint tmpMax;
+	qint tmpQ;
+	qint tmpMaxQ;
+	int maxSum = 0 ;
+	int tmpSum = 0 ;
+	
+	// traverse through the entire vector
+	for (vintit it=A.begin(); it != A.end(); it++){
+		if (*it >= 0){
+			tmpQ.push (*it);
+			tmpSum += *it;
+		} else {
+			if ( tmpSum > maxSum ) {
+				maxSum = tmpSum ;
+				tmpMaxQ = tmpQ ;
+			}
+			tmpQ = qint();
+			tmpSum = 0 ;
+		}
+	}
+
+	// last round	
+	if ( tmpSum > maxSum ) {
+		tmpMaxQ = tmpQ ;
+	}
+	
+	while(tmpMaxQ.size() != 0){
+		tmpMax.push_back(tmpMaxQ.front());
+		tmpMaxQ.pop();
+	}
     return tmpMax;
 }
 
-bool Solution::testMaxset(void){
-	random random_obj;
-	vector<int> returnVector;
+void Solution::testMaxset(void){
 
-	random_obj.random_integer_array_genration(returnVector,10);
+	class random random_obj; 
+	vint returnVector;
+
+	random_obj.random_integer_array_genration(returnVector,10, -5, 5);
 	printf ("initial data value\n");
 	random_obj.result_display(returnVector);
 	printf ("\n");
+
+	// test max set
+	vint newVector = maxset(returnVector);
+
 	printf ("updated value\n");
-	random_obj.result_display(returnVector);
+	random_obj.result_display(newVector);
 	printf ("\n");
-	//maxset(A);
-	return true;
 
 }

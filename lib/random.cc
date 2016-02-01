@@ -2,8 +2,14 @@
 #include<stdio.h>
 #include<time.h>
 #include"random.h"
+#include<vector>
 
-void random::random_integer_array_genration(vector<int> &A, int array_size){
+#include"mytypes.h"
+
+random::random(){
+}
+
+void random::random_integer_array_genration(vint &A, int array_size){
 	// random seed generation
 	srand (time(NULL));
 	
@@ -18,7 +24,7 @@ void random::random_integer_array_genration(vector<int> &A, int array_size){
 
 }
 
-void random::random_integer_array_genration(vector<int> &A, 
+void random::random_integer_array_genration(vint &A, 
 									int array_size, 
 									int random_range_start, 
 									int random_range_end){
@@ -36,12 +42,12 @@ void random::random_integer_array_genration(vector<int> &A,
 		perror ("range end equals to range start!\n");
 
 	for (int i = 0; i < array_size; i++){
-		A.push_back(rand() % (random_range_end, random_range_end + 1) + random_range_start);
+		A.push_back(rand() % (random_range_end - random_range_start) + random_range_start);
 	}
 
 }
 
-void random::random_non_negative_integer_array_genration(vector<int> &A,
+void random::random_non_negative_integer_array_genration(vint &A,
 												 int array_size){
 	// random seed generation
 	srand (time(NULL));
@@ -56,18 +62,14 @@ void random::random_non_negative_integer_array_genration(vector<int> &A,
 	}
 }
 
-void random::result_display(vector<int> &A){
+void random::result_display(vint &A){
 
 	printf ( "result value: ");
 
-	for (int i = 0; i < A.size(); i ++ ) {
-		int display_value ;
-		display_value = A.back();
-		A.pop_back();
+	for (vintit i= A.begin();i != A.end(); i++){
+		printf ("%d ", *i );
 		
-		printf ("%d ", display_value );
-
 	}
+
 }
 
-// test rsa
