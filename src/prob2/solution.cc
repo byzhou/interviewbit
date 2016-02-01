@@ -8,7 +8,6 @@
 #include"../../lib/random.h"
 #include"../../lib/mytypes.h"
 
-
 vector<int> Solution::maxset(vector<int> &A) {
     // Do not write main() function.
 	// Do not read input, instead use the arguments to the function.
@@ -101,5 +100,21 @@ void Solution::testMaxset(void){
 	printf ("updated value\n");
 	random_obj.result_display(newVector);
 	printf ("\n");
+
+	printf ("Test of one negative element: \n");
+	returnVector = vint();
+	random_obj.random_integer_array_genration(returnVector, 1, -5, -3);
+	printf ("initial data value\n");
+	random_obj.result_display(returnVector);
+	printf ("\n");
+
+	// test max set
+	newVector = maxset(returnVector);
+
+	printf ("updated value\n");
+	random_obj.result_display(newVector);
+	printf ("\n");
+
+
 
 }

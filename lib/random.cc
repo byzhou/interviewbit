@@ -65,6 +65,9 @@ void random::random_non_negative_integer_array_genration(vint &A,
 void random::result_display(vint &A){
 
 	printf ( "result value: ");
+	if (A.size() == 0) {
+		perror ("Input vector has no elements!\n");
+	}
 
 	for (vintit i= A.begin();i != A.end(); i++){
 		printf ("%d ", *i );
